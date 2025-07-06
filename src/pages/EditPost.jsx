@@ -9,7 +9,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useAuthStore from "../store/authStore";
 import { useTheme } from "@mui/material";
 import { PencilLine } from "lucide-react";
-import usePostStore from "../store/PostStore";
+import usePostStore from "../store/postStore";
 
 const schema = yup.object({
   title: yup.string().required(),

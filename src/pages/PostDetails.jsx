@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useAuthStore from "../store/authStore";
-import usePostStore from "../store/PostStore";
+import usePostStore from "../store/postStore";
 import useCommentStore from "../store/CommentStore";
 import {
   Typography, Box, Container, Button, Divider, TextField, Paper, Avatar, useTheme

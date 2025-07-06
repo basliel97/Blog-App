@@ -102,3 +102,7 @@ temp/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
+
+# Docker
+.dockerignore
+docker-compose.override.yml

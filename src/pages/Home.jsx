@@ -9,7 +9,7 @@ import PostCard from "../components/PostCard";
 import useAuthStore from "../store/authStore";
 import ArticleIcon from "@mui/icons-material/Article"; // Add this import
 import { useTheme } from "@mui/material";
-import usePostStore from "../store/PostStore";
+import usePostStore from "../store/postStore";
 
 export default function Home() {
   const [search, setSearch] = useState("");

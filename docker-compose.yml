@@ -1,0 +1,37 @@
+services:
+  bloghub-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: "http://localhost:3000"
+        VITE_APP_NAME: "BlogHub"
+    ports:
+      - "8080:80"
+    environment:
+      - VITE_API_BASE_URL=http://localhost:3000
+      - VITE_APP_NAME=BlogHub
+    restart: unless-stopped
+    networks:
+      - bloghub-network
+
+  bloghub-frontend-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - VITE_API_BASE_URL=http://localhost:3001
+    networks:
+      - bloghub-network
+    profiles:
+      - dev
+
+networks:
+  bloghub-network:
+    driver: bridge
