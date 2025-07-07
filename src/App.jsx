@@ -14,7 +14,6 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import useAuthStore from "./store/authStore";
 import { useEffect } from "react";
-import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const { mode } = useThemeStore();
@@ -28,7 +27,6 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
       <Box
         sx={{
           display: "flex",
@@ -38,7 +36,7 @@ const App = () => {
       >
         <Navbar />
         <Box component="main" sx={{ flex: 1 }}>
-          
+          <Routes>
             <Route 
               path="/" 
               element={
@@ -81,12 +79,10 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
-         
+          </Routes>
         </Box>
         <Footer />
       </Box>
-      
-      </BrowserRouter>
     </ThemeProvider>
   );
 };
