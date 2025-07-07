@@ -38,7 +38,7 @@ const App = () => {
       >
         <Navbar />
         <Box component="main" sx={{ flex: 1 }}>
-          <Routes>
+          
             <Route 
               path="/" 
               element={
@@ -81,7 +81,7 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
-          </Routes>
+         
         </Box>
         <Footer />
       </Box>
