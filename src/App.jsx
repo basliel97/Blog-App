@@ -14,6 +14,7 @@ import Navbar from "./components/NavBar";
 import Footer from "./components/Footer";
 import useAuthStore from "./store/authStore";
 import { useEffect } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const { mode } = useThemeStore();
