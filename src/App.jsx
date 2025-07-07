@@ -27,6 +27,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <BrowserRouter>
       <Box
         sx={{
           display: "flex",
@@ -83,6 +84,8 @@ const App = () => {
         </Box>
         <Footer />
       </Box>
+      
+      </BrowserRouter>
     </ThemeProvider>
   );
 };
