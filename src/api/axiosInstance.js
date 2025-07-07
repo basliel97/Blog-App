@@ -3,7 +3,7 @@ import useAuthStore from "../store/authStore";
 
 // API Configuration
 const API_CONFIG = {
-  baseURL: "http://localhost:3000",
+  baseURL: "https://blog-api-1-r23t.onrender.com",
   timeout: 10000,
   headers: {
     "Content-Type": "application/json",
